@@ -15,10 +15,27 @@
 
     <p> <input type="text" id="guess"> <button id="checkGuess">Guess</button>
     </p>
-    <script type="text/Javascript">
+   
+   
+   
+   
+   
+   <script type="text/Javascript">
 // alert (Math.floor((Math.random()*6))); this gets the random number btwn 0 and 6 
+    document.getElementById("checkGuess").onclick = function (){
 
+        let randomNumber = Math.random ();
+         randomNumber = randomNumber * 6;
 
+         randomNumber = Math.floor(randomNumber);
+         if ( document.getElementById("guess").value === randomNumber){
+             alert ( " Well done! You got it !")
+         }
+         else {
+             alert ( " Nope! the number was : " + randomNumber);
+         }
+    }
+       
 </script>
 
 </body>
