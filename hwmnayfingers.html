@@ -28,13 +28,24 @@
          randomNumber = randomNumber * 6;
 
          randomNumber = Math.floor(randomNumber);
-         if ( document.getElementById("guess").value === randomNumber){
+
+         let guessvalue =  document.getElementById("guess").value;
+        
+         if ( guessvalue > randomNumber){
+             alert ( "Your guess is higher that mine by : " + (guessvalue - randomNumber) )
+         }
+        
+        else  if (guessvalue === randomNumber){
              alert ( " Well done! You got it !")
          }
+    
          else {
-             alert ( " Nope! the number was : " + randomNumber);
+             alert ( "Your guess is lower than mine by : " + (randomNumber - guessvalue));
          }
+
     }
+
+
        
 </script>
 
